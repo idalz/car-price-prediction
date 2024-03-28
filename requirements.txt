@@ -3,7 +3,7 @@ pandas
 matplotlib
 seaborn
 notebook
-pytorch
+torch
 dvc
 python-box
 pyYAML
