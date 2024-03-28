@@ -21,7 +21,7 @@ list_of_files = [
     "config/config.yaml",
     "dvc.yaml",
     "params.yaml",
-    "requirements.txt"
+    "requirements.txt",
     "setup.py",
     "research/trials.ipynb",
 ]
@@ -40,4 +40,3 @@ for filepath in list_of_files:
             pass
     else:
         logging.info(f"{filename} already exists.")
-        
