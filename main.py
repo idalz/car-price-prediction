@@ -1,3 +1,3 @@
-from src.carPricePrediction.logging import logger
+from carPricePrediction.logging import logger
 
 logger.info("Testing custom log.")

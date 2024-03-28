@@ -7,7 +7,7 @@ logging.basicConfig(
     format='[%(asctime)s]: %(message)s:'
 )
 
-project_name = 'carPricePrediction'
+project_name = "carPricePrediction"
 list_of_files = [
     ".github/workflows/.gitkeep",
     f"src/{project_name}/__init__.py",
@@ -17,9 +17,9 @@ list_of_files = [
     f"src/{project_name}/logging/__init__.py",
     f"src/{project_name}/config/__init__.py",
     f"src/{project_name}/config/configuration.py",
-    f"src/{project_name}/pipeline/_init__.py",
-    f"src/{project_name}/entity/_init__.py",
-    f"src/{project_name}/constants/_init__.py",
+    f"src/{project_name}/pipeline/__init__.py",
+    f"src/{project_name}/entity/__init__.py",
+    f"src/{project_name}/constants/__init__.py",
     "config/config.yaml",
     "dvc.yaml",
     "params.yaml",
