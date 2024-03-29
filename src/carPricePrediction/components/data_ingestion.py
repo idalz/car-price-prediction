@@ -8,18 +8,15 @@ class DataIngestion:
         self.config = config
 
     def download_data(self):
-        if not os.path.exists(self.config.dataset_dir):
-            # Connect to Kaggle API
-            api = KaggleApi()
-            api.authenticate()
+        # Connect to Kaggle API
+        api = KaggleApi()
+        api.authenticate()
 
-            # Download the dataset
-            api.dataset_download_files(
-                dataset=self.config.source_URL,
-                path=self.config.dataset_dir,
-                unzip=True
-            )
+        # Download the dataset
+        api.dataset_download_files(
+            dataset=self.config.source_URL,
+            path=self.config.dataset_dir,
+            unzip=True
+        )
 
-            logger.info("Dataset downloaded successfully.")
-        else:
-            logger.info(f"Dataset already exists.")
+        logger.info("Dataset downloaded successfully.")
