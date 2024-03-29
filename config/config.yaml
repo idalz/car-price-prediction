@@ -4,3 +4,8 @@ data_ingestion:
   root_dir: artifacts/data
   dataset_dir: artifacts/data/raw 
   source_URL: deepcontractor/car-price-prediction-challenge
+
+data_cleaning:
+  root_dir: artifacts/data
+  raw_dataset_dir: artifacts/data/raw
+  dataset_dir: artifacts/data/interim

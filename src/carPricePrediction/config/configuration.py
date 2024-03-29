@@ -1,6 +1,9 @@
 from carPricePrediction.constants import *
 from carPricePrediction.utils.common import read_yaml, create_directories
-from carPricePrediction.entity import DataIngestionConfig
+from carPricePrediction.entity import (
+    DataIngestionConfig,
+    DataCleaningConfig
+)
 
 class ConfigurationManager:
     def __init__(
@@ -24,4 +27,18 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+    
+    def get_data_cleaning_config(self)-> DataCleaningConfig:
+        config = self.config.data_cleaning
+
+        create_directories([config.root_dir, config.dataset_dir])
+
+        data_cleaning_config = DataCleaningConfig(
+            root_dir = config.root_dir,
+            raw_dataset_dir = config.raw_dataset_dir,
+            dataset_dir = config.dataset_dir
+            
+        )
+
+        return data_cleaning_config
     
