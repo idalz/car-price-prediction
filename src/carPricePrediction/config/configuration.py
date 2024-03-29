@@ -2,7 +2,8 @@ from carPricePrediction.constants import *
 from carPricePrediction.utils.common import read_yaml, create_directories
 from carPricePrediction.entity import (
     DataIngestionConfig,
-    DataCleaningConfig
+    DataCleaningConfig,
+    DataTransformationConfig
 )
 
 class ConfigurationManager:
@@ -41,4 +42,24 @@ class ConfigurationManager:
         )
 
         return data_cleaning_config
+    
+    def get_data_transformation_config(self)-> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([
+            config.root_dir, 
+            config.dataset_dir,
+            config.label_encoder_dir,
+            config.embed_dim_dir
+        ])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir = config.root_dir,
+            interim_dataset_dir = config.interim_dataset_dir,
+            dataset_dir = config.dataset_dir,
+            label_encoder_dir = config.label_encoder_dir,
+            embed_dim_dir = config.embed_dim_dir            
+        )
+
+        return data_transformation_config
     

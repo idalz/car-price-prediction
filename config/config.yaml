@@ -9,3 +9,10 @@ data_cleaning:
   root_dir: artifacts/data
   raw_dataset_dir: artifacts/data/raw
   dataset_dir: artifacts/data/interim
+
+data_transformation:
+  root_dir: artifacts
+  interim_dataset_dir: artifacts/data/interim
+  dataset_dir: artifacts/data/processed
+  label_encoder_dir: artifacts/encoders
+  embed_dim_dir: artifacts/embedding_dim

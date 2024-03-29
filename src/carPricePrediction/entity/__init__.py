@@ -13,3 +13,10 @@ class DataCleaningConfig:
     raw_dataset_dir: Path
     dataset_dir: Path
     
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    interim_dataset_dir: Path
+    dataset_dir: Path
+    label_encoder_dir: Path
+    embed_dim_dir: Path
