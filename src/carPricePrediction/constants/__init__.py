@@ -8,3 +8,4 @@ PARAMS_FILE_PATH = Path("params.yaml")
 STAGE_DATA_INGESTION = "Data Ingestion"
 STAGE_DATA_CLEANING = "Data Cleaning"
 STAGE_DATA_TRANSFORMATION = "Data Transformation"
+STAGE_MODEL_TRAINER = "Model Trainer"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import List
 
 @dataclass(frozen=True)
 class DataIngestionConfig:
@@ -20,3 +21,16 @@ class DataTransformationConfig:
     dataset_dir: Path
     label_encoder_dir: Path
     tensors_dim_dir: Path
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir: Path
+    processed_dataset_dir: Path
+    embed_dim_file_path: str
+    num_dim_file_path: str
+    model_dir: Path
+    batch_size: int
+    epochs: int
+    lr: float
+    layers: List
+    dropout: float

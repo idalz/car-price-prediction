@@ -3,7 +3,8 @@ from carPricePrediction.utils.common import read_yaml, create_directories
 from carPricePrediction.entity import (
     DataIngestionConfig,
     DataCleaningConfig,
-    DataTransformationConfig
+    DataTransformationConfig,
+    ModelTrainerConfig
 )
 
 class ConfigurationManager:
@@ -59,6 +60,30 @@ class ConfigurationManager:
             dataset_dir = config.dataset_dir,
             label_encoder_dir = config.label_encoder_dir,
             tensors_dim_dir = config.tensors_dim_dir            
+        )
+
+        return data_transformation_config
+    
+    def get_model_trainer_config(self)-> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.TrainingArguments
+
+        create_directories([
+            config.root_dir, 
+            config.model_dir
+        ])
+
+        data_transformation_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            processed_dataset_dir = config.processed_dataset_dir,
+            embed_dim_file_path = config.embed_dim_file_path,
+            num_dim_file_path = config.num_dim_file_path,
+            model_dir = config.model_dir,
+            batch_size = params.batch_size,
+            epochs = params.epochs,
+            lr = params.lr,
+            layers = params.layers,
+            dropout = params.dropout       
         )
 
         return data_transformation_config
