@@ -4,7 +4,7 @@ import pickle
 
 import pandas as pd
 import torch
-from torch.utils.data import TensorDataset
+from torch.utils.data import TensorDataset, random_split
 from sklearn.preprocessing import LabelEncoder
 
 from carPricePrediction.logging import logger
@@ -65,7 +65,21 @@ class DataTransfomration:
 
         ### Save dataset
         dataset = TensorDataset(cat_tensor, num_tensor, y_tensor)
-        dataset_file_path = os.path.join(self.config.dataset_dir,"dataset.pth")
-        torch.save(dataset, dataset_file_path)
+        train_data, val_data, test_data = self.get_random_split(dataset)
 
-        logger.info("Processed dataset saved successfully.")
+        train_file_path = os.path.join(self.config.dataset_dir,"train.pth")
+        val_file_path = os.path.join(self.config.dataset_dir,"val.pth")
+        test_file_path = os.path.join(self.config.dataset_dir,"test.pth")
+        torch.save(train_data, train_file_path)
+        torch.save(val_file_path, val_file_path)
+        torch.save(test_file_path, test_file_path)
+
+        logger.info("Processed datasets saved successfully.")
+
+
+    def get_random_split(self, dataset):
+        train_size = int(0.7 * len(dataset))  # 70% for training
+        val_size = int(0.15 * len(dataset))   # 15% for validation
+        test_size = len(dataset) - train_size - val_size 
+        train_data, val_data, test_data = random_split(dataset, [train_size, val_size, test_size])
+        return train_data, val_data, test_data
