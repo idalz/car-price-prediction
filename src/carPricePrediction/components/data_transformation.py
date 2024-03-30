@@ -71,8 +71,8 @@ class DataTransfomration:
         val_file_path = os.path.join(self.config.dataset_dir,"val.pth")
         test_file_path = os.path.join(self.config.dataset_dir,"test.pth")
         torch.save(train_data, train_file_path)
-        torch.save(val_file_path, val_file_path)
-        torch.save(test_file_path, test_file_path)
+        torch.save(val_data, val_file_path)
+        torch.save(test_data, test_file_path)
 
         logger.info("Processed datasets saved successfully.")
 
