@@ -34,3 +34,16 @@ class ModelTrainerConfig:
     lr: float
     layers: List
     dropout: float
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    model_file_path: Path
+    model_state_file_path: Path
+    embed_dim_file_path: Path
+    num_dim_file_path: Path
+    data_file_path: Path
+    evaluation_results: Path
+    batch_size: Path
+    layers: List
+    dropout: float

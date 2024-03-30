@@ -4,6 +4,7 @@ from carPricePrediction.pipeline.stage_01_data_ingestion import DataIngestionTra
 from carPricePrediction.pipeline.stage_02_data_cleaning import DataCleaningTrainingPipeline
 from carPricePrediction.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 from carPricePrediction.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
+from carPricePrediction.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 # Data ingestion
 try:
     logger.info(f"Stage: {STAGE_DATA_INGESTION} started.")  
@@ -37,5 +38,14 @@ try :
     obj = ModelTrainerTrainingPipeline()
     obj.main()
     logger.info(f"Stage: {STAGE_MODEL_TRAINER} completed.")
+except Exception as e:
+    raise e
+
+# Model Evaluation
+try:
+    logger.info(f"Stage: {STAGE_MODEL_EVALUATION} started.")  
+    obj = ModelEvaluationTrainingPipeline()
+    obj.main()
+    logger.info(f"Stage: {STAGE_MODEL_EVALUATION} completed.")
 except Exception as e:
     raise e
