@@ -19,4 +19,4 @@ class DataTransformationConfig:
     interim_dataset_dir: Path
     dataset_dir: Path
     label_encoder_dir: Path
-    embed_dim_dir: Path
+    tensors_dim_dir: Path

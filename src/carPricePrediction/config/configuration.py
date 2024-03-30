@@ -50,7 +50,7 @@ class ConfigurationManager:
             config.root_dir, 
             config.dataset_dir,
             config.label_encoder_dir,
-            config.embed_dim_dir
+            config.tensors_dim_dir
         ])
 
         data_transformation_config = DataTransformationConfig(
@@ -58,7 +58,7 @@ class ConfigurationManager:
             interim_dataset_dir = config.interim_dataset_dir,
             dataset_dir = config.dataset_dir,
             label_encoder_dir = config.label_encoder_dir,
-            embed_dim_dir = config.embed_dim_dir            
+            tensors_dim_dir = config.tensors_dim_dir            
         )
 
         return data_transformation_config
