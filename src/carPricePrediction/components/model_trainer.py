@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from carPricePrediction.components.feed_forward_nn import FeedForwardNN
-from carPricePrediction.entity import ModelTrainerConfig
+from carPricePrediction.config.configuration import ModelTrainerConfig
 from carPricePrediction.logging.model_logger import ModelLogger
 
 class ModelTrainer:
