@@ -1,0 +1,68 @@
+stages:
+  data_ingestion:
+    cmd: python src/carPricePrediction/pipeline/stage_01_data_ingestion.py
+    deps:
+      - src/carPricePrediction/pipeline/stage_01_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data/raw
+    
+  data_cleaning:
+    cmd: python src/carPricePrediction/pipeline/stage_02_data_cleaning.py
+    deps:
+      - src/carPricePrediction/pipeline/stage_02_data_cleaning.py
+      - config/config.yaml
+      - artifacts/data/raw
+    outs:
+      - artifacts/data/interim
+
+  data_transfomration:
+    cmd: python src/carPricePrediction/pipeline/stage_03_data_transformation.py
+    deps:
+      - src/carPricePrediction/pipeline/stage_03_data_transformation.py
+      - config/config.yaml
+      - artifacts/data/interim
+    outs:
+      - artifacts/encoders
+      - artifacts/tensors_dim
+      - artifacts/data/processed
+
+  model_trainer:
+    cmd: python src/carPricePrediction/pipeline/stage_04_model_trainer.py
+    deps:
+      - src/carPricePrediction/pipeline/stage_04_model_trainer.py
+      - config/config.yaml
+      #- params:
+      #  - batch_size
+      #  - epochs
+      #  - lr
+      #  - layers
+      #  - dropout
+      - params.yaml
+      - artifacts/encoders
+      - artifacts/tensors_dim
+      - artifacts/data/processed
+    outs:
+      - artifacts/model
+
+  model_evaluation:
+    cmd: python src/carPricePrediction/pipeline/stage_05_model_evaluation.py
+    deps:
+      - src/carPricePrediction/pipeline/stage_05_model_evaluation.py
+      - config/config.yaml
+      #- params:
+      #  - batch_size
+      #  - layers
+      #  - dropout
+      - params.yaml
+      - artifacts/model/model.pth
+      - artifacts/model/model_state_dict.pth
+      - artifacts/tensors_dim/embedding_dim.pkl
+      - artifacts/tensors_dim/num_dim.pkl
+      - artifacts/data/processed/test.pth
+    metrics:
+      - score.txt:
+          cache: false
+    outs:
+      - artifacts/model_evaluation/score.txt
+  

@@ -61,7 +61,6 @@ class ModelEvaluation:
             test_loss /= len(test_loader)
 
         # Save test loss
-        results_path = os.path.join(self.config.evaluation_results, 'evaluation_results.txt')
-        with open(results_path, 'w') as file:
+        with open(self.config.evaluation_results, 'w') as file:
             file.write(f'Test Loss (RMSE): {test_loss:.4f}')
             
