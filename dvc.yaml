@@ -61,8 +61,6 @@ stages:
       - artifacts/tensors_dim/num_dim.pkl
       - artifacts/data/processed/test.pth
     metrics:
-      - score.txt:
+      - artifacts/model_evaluation/score.txt:
           cache: false
-    outs:
-      - artifacts/model_evaluation/score.txt
   
