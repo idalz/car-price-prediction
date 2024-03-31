@@ -30,6 +30,3 @@ model_evaluation:
   data_file_path: artifacts/data/processed/test.pth
   evaluation_results: artifacts/model_evaluation/score.txt
   
-prediction:
-  model_file_path: artifacts/model/model.pth
-  encoders_path: encoders/LE_dict.pkl
