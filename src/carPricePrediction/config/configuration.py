@@ -98,14 +98,9 @@ class ConfigurationManager:
         model_evaluation_config = ModelEvaluationConfig(
             root_dir=config.root_dir,
             model_file_path=config.model_file_path,
-            model_state_file_path = config.model_state_file_path,
-            embed_dim_file_path = config.embed_dim_file_path,
-            num_dim_file_path = config.num_dim_file_path,
             data_file_path = config.data_file_path,
             evaluation_results = config.evaluation_results,
-            batch_size = params.batch_size,
-            layers = params.layers,
-            dropout =  params.layers
+            batch_size = params.batch_size
         )
 
         return model_evaluation_config

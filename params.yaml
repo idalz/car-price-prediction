@@ -5,7 +5,6 @@ TrainingArguments:
   layers: [128,64]
   dropout: 0.3
 
-EvaluationArguments: # Should agree with TrainingArguments 
+EvaluationArguments:
   batch_size: 1024
-  layers: [128,64] 
-  dropout: 0.3
+  

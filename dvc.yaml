@@ -32,12 +32,6 @@ stages:
     deps:
       - src/carPricePrediction/pipeline/stage_04_model_trainer.py
       - config/config.yaml
-      #- params:
-      #  - batch_size
-      #  - epochs
-      #  - lr
-      #  - layers
-      #  - dropout
       - params.yaml
       - artifacts/encoders
       - artifacts/tensors_dim
@@ -50,15 +44,8 @@ stages:
     deps:
       - src/carPricePrediction/pipeline/stage_05_model_evaluation.py
       - config/config.yaml
-      #- params:
-      #  - batch_size
-      #  - layers
-      #  - dropout
       - params.yaml
       - artifacts/model/model.pth
-      - artifacts/model/model_state_dict.pth
-      - artifacts/tensors_dim/embedding_dim.pkl
-      - artifacts/tensors_dim/num_dim.pkl
       - artifacts/data/processed/test.pth
     metrics:
       - artifacts/model_evaluation/score.txt:

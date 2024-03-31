@@ -27,9 +27,9 @@ model_trainer:
 model_evaluation:
   root_dir: artifacts/model_evaluation
   model_file_path: artifacts/model/model.pth
-  model_state_file_path: artifacts/model/model_state_dict.pth
-  embed_dim_file_path: artifacts/tensors_dim/embedding_dim.pkl
-  num_dim_file_path: artifacts/tensors_dim/num_dim.pkl
   data_file_path: artifacts/data/processed/test.pth
   evaluation_results: artifacts/model_evaluation/score.txt
   
+prediction:
+  model_file_path: artifacts/model/model.pth
+  encoders_path: encoders/LE_dict.pkl
