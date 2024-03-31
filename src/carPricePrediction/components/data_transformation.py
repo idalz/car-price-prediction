@@ -49,9 +49,8 @@ class DataTransfomration:
         embedding_dim = [(x, min(50, (x+1)//2)) for x in cat_dims]
 
         ### Save Label Encoders
-        for feature, encoder in lbl_encoders.items():
-            encoder_file_path = os.path.join(self.config.label_encoder_dir, f'LE_{feature}.pkl')
-            joblib.dump(encoder, encoder_file_path)
+        encoder_file_path = os.path.join(self.config.label_encoder_dir, f'LE_dict.pkl')
+        joblib.dump(lbl_encoders, encoder_file_path)
 
         ### Save numerical dimensions  
         num_dim_file_path = os.path.join(self.config.tensors_dim_dir, 'num_dim.pkl')
