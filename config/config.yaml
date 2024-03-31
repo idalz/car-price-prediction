@@ -25,7 +25,7 @@ model_trainer:
   model_dir: artifacts/model
 
 model_evaluation:
-  root_dir: artifacts
+  root_dir: artifacts/model_evaluation
   model_file_path: artifacts/model/model.pth
   model_state_file_path: artifacts/model/model_state_dict.pth
   embed_dim_file_path: artifacts/tensors_dim/embedding_dim.pkl
