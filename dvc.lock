@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 8359b6a93f0d0daaa2d06b6a7d58728b
-      size: 1083
+      md5: e95a6cfe764b412860f797f0cb6853c8
+      size: 983
     - path: src/carPricePrediction/pipeline/stage_01_data_ingestion.py
       hash: md5
       md5: 810f4172703730ad969a4e4ffd3d9a90
@@ -27,8 +27,8 @@ stages:
       nfiles: 1
     - path: config/config.yaml
       hash: md5
-      md5: 8359b6a93f0d0daaa2d06b6a7d58728b
-      size: 1083
+      md5: e95a6cfe764b412860f797f0cb6853c8
+      size: 983
     - path: src/carPricePrediction/pipeline/stage_02_data_cleaning.py
       hash: md5
       md5: 30142eccf436f07157ca25702fe109f2
@@ -49,8 +49,8 @@ stages:
       nfiles: 1
     - path: config/config.yaml
       hash: md5
-      md5: 8359b6a93f0d0daaa2d06b6a7d58728b
-      size: 1083
+      md5: e95a6cfe764b412860f797f0cb6853c8
+      size: 983
     - path: src/carPricePrediction/pipeline/stage_03_data_transformation.py
       hash: md5
       md5: 7ae7a70a57fa16bbcd9d48f0696e0fe0
@@ -58,7 +58,7 @@ stages:
     outs:
     - path: artifacts/data/processed
       hash: md5
-      md5: 321b5b18f5dacb0444e6b43c04ca610a.dir
+      md5: 149477c1ce07c47e42e5fda9d27c181d.dir
       size: 4867517
       nfiles: 3
     - path: artifacts/encoders
@@ -76,7 +76,7 @@ stages:
     deps:
     - path: artifacts/data/processed
       hash: md5
-      md5: 321b5b18f5dacb0444e6b43c04ca610a.dir
+      md5: 149477c1ce07c47e42e5fda9d27c181d.dir
       size: 4867517
       nfiles: 3
     - path: artifacts/encoders
@@ -91,8 +91,8 @@ stages:
       nfiles: 2
     - path: config/config.yaml
       hash: md5
-      md5: 8359b6a93f0d0daaa2d06b6a7d58728b
-      size: 1083
+      md5: e95a6cfe764b412860f797f0cb6853c8
+      size: 983
     - path: params.yaml
       hash: md5
       md5: 11079a721dad6d7928207bb81f9c00c9
@@ -104,24 +104,24 @@ stages:
     outs:
     - path: artifacts/model
       hash: md5
-      md5: 294f29eb316b288c33c3634fb8a27261.dir
-      size: 263224
+      md5: 006fd9ad95b6dfc413e63c4a6a05c7df.dir
+      size: 263226
       nfiles: 3
   model_evaluation:
     cmd: python src/carPricePrediction/pipeline/stage_05_model_evaluation.py
     deps:
     - path: artifacts/data/processed/test.pth
       hash: md5
-      md5: 652248be835f4d8133acf0601fb097e0
+      md5: a283f1473eda728e9a89b16bca89a89d
       size: 1614079
     - path: artifacts/model/model.pth
       hash: md5
-      md5: e5f1a18e942bb9bd758538cc5c3018ed
+      md5: fcedde405cf7870e3cd645344bdd4212
       size: 92851
     - path: config/config.yaml
       hash: md5
-      md5: 8359b6a93f0d0daaa2d06b6a7d58728b
-      size: 1083
+      md5: e95a6cfe764b412860f797f0cb6853c8
+      size: 983
     - path: params.yaml
       hash: md5
       md5: 11079a721dad6d7928207bb81f9c00c9
@@ -133,5 +133,5 @@ stages:
     outs:
     - path: artifacts/model_evaluation/score.txt
       hash: md5
-      md5: 904bfdc327b9763c18ca24ef0570b2b9
+      md5: be6099fe16286b7b3b01880eeb99818e
       size: 27
