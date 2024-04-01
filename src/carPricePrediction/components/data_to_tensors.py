@@ -1,16 +1,22 @@
 import joblib
 import pandas as pd
 import torch
+from carPricePrediction.constants import NUM_FEATURES
 
 class DataToTensors:
     def __init__(self):
         self.lbl_encoders = joblib.load('artifacts/encoders/LE_dict.pkl')
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
-    def json_to_tensors(self, json_string):
-        # Load JSON file into a DataFrame
-        df = pd.read_json(json_string)
+    def convert_data_to_tensors(self, data):
+        # Load data into a DataFrame
+        df = pd.DataFrame([data])
 
+        # Convert to float
+        for col in NUM_FEATURES:
+            df[col] = pd.to_numeric(df[col], errors='coerce') 
+        df[NUM_FEATURES] = df[NUM_FEATURES].astype(float)
+        
         # Convert data to tensors
         # Numerical tensor
         num_features = df.select_dtypes(include='number').columns
