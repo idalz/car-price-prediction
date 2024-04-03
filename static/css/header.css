@@ -1,0 +1,35 @@
+@import url(colors.css);
+
+/* ================ Style the header  ================ */
+/* =================================================== */
+
+header {
+    color: var(--primary-color-1);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    backdrop-filter: blur(1px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px; 
+    font-size: 18px; 
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: var(--primary-color-1); 
+}

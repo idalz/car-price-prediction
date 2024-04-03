@@ -1,260 +1,34 @@
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Information Form</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    <h2>Car Information Form</h2>
-    <form id="carForm">
-        <h2>Car Information Form</h2>
-        <label for="Manufacturer">Manufacturer:</label>
-        <select id="Manufacturer" name="Manufacturer" required>
-            <option value="">Select Manufacturer</option>
-            <option value="LEXUS">LEXUS</option>
-            <option value="CHEVROLET">CHEVROLET</option>
-            <option value="HONDA">HONDA</option>
-            <option value="FORD">FORD</option>
-            <option value="HYUNDAI">HYUNDAI</option>
-            <option value="TOYOTA">TOYOTA</option>
-            <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
-            <option value="OPEL">OPEL</option>
-            <option value="PORSCHE">PORSCHE</option>
-            <option value="BMW">BMW</option>
-            <option value="JEEP">JEEP</option>
-            <option value="VOLKSWAGEN">VOLKSWAGEN</option>
-            <option value="AUDI">AUDI</option>
-            <option value="RENAULT">RENAULT</option>
-            <option value="NISSAN">NISSAN</option>
-            <option value="SUBARU">SUBARU</option>
-            <option value="DAEWOO">DAEWOO</option>
-            <option value="KIA">KIA</option>
-            <option value="MITSUBISHI">MITSUBISHI</option>
-            <option value="SSANGYONG">SSANGYONG</option>
-            <option value="MAZDA">MAZDA</option>
-            <option value="GMC">GMC</option>
-            <option value="FIAT">FIAT</option>
-            <option value="INFINITI">INFINITI</option>
-            <option value="ALFA ROMEO">ALFA ROMEO</option>
-            <option value="SUZUKI">SUZUKI</option>
-            <option value="ACURA">ACURA</option>
-            <option value="LINCOLN">LINCOLN</option>
-            <option value="VAZ">VAZ</option>
-            <option value="GAZ">GAZ</option>
-            <option value="CITROEN">CITROEN</option>
-            <option value="LAND ROVER">LAND ROVER</option>
-            <option value="MINI">MINI</option>
-            <option value="DODGE">DODGE</option>
-            <option value="CHRYSLER">CHRYSLER</option>
-            <option value="JAGUAR">JAGUAR</option>
-            <option value="ISUZU">ISUZU</option>
-            <option value="SKODA">SKODA</option>
-            <option value="BUICK">BUICK</option>
-            <option value="TESLA">TESLA</option>
-            <option value="DAIHATSU">DAIHATSU</option>
-            <option value="CADILLAC">CADILLAC</option>
-            <option value="PEUGEOT">PEUGEOT</option>
-            <option value="VOLVO">VOLVO</option>
-            <option value="სხვა">სხვა</option>
-            <option value="HAVAL">HAVAL</option>
-            <option value="SCION">SCION</option>
-            <option value="MERCURY">MERCURY</option>
-            <option value="ZAZ">ZAZ</option>
-            <option value="ROVER">ROVER</option>
-            <option value="UAZ">UAZ</option>
-            <option value="SEAT">SEAT</option>
-            <option value="LANCIA">LANCIA</option>
-            <option value="MOSKVICH">MOSKVICH</option>
-            <option value="MASERATI">MASERATI</option>
-            <option value="HUMMER">HUMMER</option>
-            <option value="SAAB">SAAB</option>
-            <option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
-            <option value="PONTIAC">PONTIAC</option>
-            <option value="SATURN">SATURN</option>
-            <option value="ASTON MARTIN">ASTON MARTIN</option>
-            <option value="GREATWALL">GREATWALL</option>
-        </select><br>
-
-        <label for="Category">Category:</label>
-        <select id="Category" name="Category" required>
-            <option value="">Select Category</option>
-            <option value="Jeep">Jeep</option>
-            <option value="Hatchback">Hatchback</option>
-            <option value="Sedan">Sedan</option>
-            <option value="Microbus">Microbus</option>
-            <option value="Goods wagon">Goods wagon</option>
-            <option value="Universal">Universal</option>
-            <option value="Coupe">Coupe</option>
-            <option value="Minivan">Minivan</option>
-            <option value="Cabriolet">Cabriolet</option>
-            <option value="Limousine">Limousine</option>
-            <option value="Pickup">Pickup</option>
-        </select><br>
-
-        <label for="Leather interior">Leather Interior:</label>
-        <select id="Leather interior" name="Leather interior" required>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select><br>
-
-        <label for="Fuel type">Fuel Type:</label>
-        <select id="Fuel type" name="Fuel type"required>
-            <option value="">Select Fuel Type</option>
-            <option value="Hybrid">Hybrid</option>
-            <option value="Petrol">Petrol</option>
-            <option value="Diesel">Diesel</option>
-            <option value="CNG">CNG</option>
-            <option value="Plug-in Hybrid">Plug-in Hybrid</option>
-            <option value="LPG">LPG</option>
-            <option value="Hydrogen">Hydrogen</option>
-        </select><br>
-
-        <label for="Cylinders">Cylinders:</label>
-        <input type="number" id="Cylinders" name="Cylinders" min="2" max="16" placeholder="Enter a number between 2 and 16" required><br>
-
-        <label for="Gear box type">Gear Box Type:</label>
-        <select id="Gear box type" name="Gear box type" required>
-            <option value="">Select Gear Box Type</option>
-            <option value="Automatic">Automatic</option>
-            <option value="Tiptronic">Tiptronic</option>
-            <option value="Variator">Variator</option>
-            <option value="Manual">Manual</option>
-        </select><br>
-
-        <label for="Drive wheels">Drive Wheels:</label>
-        <select id="Drive wheels" name="Drive wheels" required>
-            <option value="">Select Drive Wheels</option>
-            <option value="4x4">4x4</option>
-            <option value="Front">Front</option>
-            <option value="Rear">Rear</option>
-        </select><br>
-
-        <label for="Doors">Doors:</label>
-        <select id="Doors" name="Doors" required>
-            <option value="">Select Doors</option>
-            <option value="04-May">04-May</option>
-            <option value="02-Mar">02-Mar</option>
-            <option value=">5">&gt;5</option>
-        </select><br>
-
-        <label for="Wheel">Wheel:</label>
-        <select id="Wheel" name="Wheel" required>
-            <option value="">Select Wheel</option>
-            <option value="Left wheel">Left wheel</option>
-            <option value="Right-hand drive">Right-hand drive</option>
-        </select><br>
-
-        <label for="Color">Color:</label>
-        <select id="Color" name="Color" required>
-            <option value="">Select Color</option>
-            <option value="Silver">Silver</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-            <option value="Grey">Grey</option>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-            <option value="Red">Red</option>
-            <option value="Sky blue">Sky blue</option>
-            <option value="Orange">Orange</option>
-            <option value="Yellow">Yellow</option>
-            <option value="Brown">Brown</option>
-            <option value="Golden">Golden</option>
-            <option value="Beige">Beige</option>
-            <option value="Carnelian red">Carnelian red</option>
-            <option value="Purple">Purple</option>
-            <option value="Pink">Pink</option>
-        </select><br>
-
-        <label for="Airbags">Airbags:</label>
-        <input type="number" id="Airbags" name="Airbags" step="1" min="0" max="16" placeholder="Enter a number between 0 and 16" required><br>
-
-
-        <label for="EngineVolume">Engine Volume:</label>
-        <input type="number" id="EngineVolume" name="EngineVolume" min="0" max="6" step="0.01"  placeholder="Enter a number between 0 and 6" required><br>
-
-        <label for="Turbo">Turbo:</label>
-        <select id="Turbo" name="Turbo" required>
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-        </select><br>
-
-        <label for="Mileage_km">Mileage:</label>
-        <input type="number" id="Mileage_km" name="Mileage_km" step="1" min="0" max="700000" placeholder="Enter mileage in kilometers" required><br>
-
-        <label for="years">Years:</label>
-        <input type="number" id="years" name="years" step="1" min="1970" max="2024" placeholder="Enter the year (e.g., 2005)" required><br>
-
-        <button type="submit">Predict Price</button>
-        <div id="predictedPrice"></div>
-    </form>
-    <footer>
-        <div class="container">
-          <div class="left-block">
-            <h3>Project Information</h3>
-            <p>Project Name</p>
-            <p>Description: Brief description of your project.</p>
-          </div>
-          <div class="right-block">
-            <h3>Contact Information</h3>
-            <p>Email: example@example.com</p>
-            <p>Kaggle: <a href="https://www.kaggle.com/yourusername">Your Kaggle Profile</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername">Your GitHub Profile</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername">Your LinkedIn Profile</a></p>
-        </div>
-        </div>
-        <div class="copyright">
-            <p>This project is open-source and available for free use under the <a href="link-to-license">LICENSE_NAME</a> license.</p>
+    {% include 'header.html' %}
+    <div class="quote">
+        <h2>A brief description</h2>
+        <p>Explain the project in few words.</p>
+        <button onclick="window.location.href='/predict'">Button to prediction</button>
+    </div>
+    <footer class="footer">
+        <div class="contact-info">
+            <p>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/linkedin_icon.png') }}" alt="LinkedIn">
+                </a>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/github_icon.png') }}" alt="GitHub">
+                </a>
+                <a href="#">
+                    <img src="{{ url_for('static', filename='images/kaggle_icon.png') }}" alt="Kaggle">
+                </a>
+            </p>
         </div>
     </footer>
-    <script>
-        document.getElementById('carForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            // Get form data
-            var formData = new FormData(this);
-    
-            // Convert form data to JSON
-            var jsonData = {};
-            formData.forEach(function(value, key) {
-                if (key === "years") {
-                    // Calculate current year - value for years
-                    var currentYear = new Date().getFullYear();
-                    jsonData[key] = currentYear - value;
-                } else {
-                    jsonData[key] = value;
-                }
-            });
-    
-            // Send form data to backend
-            fetch('/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(jsonData)
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Handle successful response
-                    console.log('Form data submitted successfully.');
-                    return response.json(); // Parse JSON response
-                } else {
-                    // Handle error response
-                    console.error('Error submitting form data.');
-                    throw new Error('Error submitting form data.');
-                }
-            })
-            .then(data => {
-                // Display predicted price
-                var predictedPriceElement = document.getElementById('predictedPrice');
-                predictedPriceElement.textContent = 'Predicted price: ' + data.predictedPrice; // Assuming the key for predicted price is 'predictedPrice' in the response
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
 </body>
 </html>

@@ -17,20 +17,27 @@ class ClientApp:
 def home():
     return render_template('index.html')
 
-@app.route("/train", methods=['GET','POST'])
+@app.route("/about", methods=['GET'])
 @cross_origin()
-def trainRoute():
-    # os.system("python main.py")
-    os.system("dvc repro")
-    return "Training done successfully."
+def about():
+    return render_template('about.html')
 
-@app.route("/predict", methods=['POST'])
+@app.route("/predict", methods=['GET', 'POST'])
 @cross_origin()
-def predictRoute():
-    data = request.json
-    result = clApp.model.predict(data)
-    result = round(result)
-    return jsonify({'predictedPrice': result})
+def predict():
+    if request.method == 'POST':
+        data = request.json
+        result = clApp.model.predict(data)
+        result = round(result)
+        return jsonify({'predictedPrice': result})
+    else:
+        return render_template('predict.html')
+
+#@app.route("/train", methods=['GET','POST'])
+#def trainRoute():
+#    # os.system("python main.py")
+#    os.system("dvc repro")
+#    return "Training done successfully."
 
 if __name__ == "__main__":
     clApp = ClientApp()

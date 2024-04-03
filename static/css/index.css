@@ -1,0 +1,95 @@
+@import url(colors.css);
+@import url(header.css);
+
+/* ================== Style the index page ================== */
+/* ========================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('../images/background-image.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+
+.quote {
+    margin: 15px;
+    padding: 5px; 
+    position: absolute;
+    left: 0;
+    top: 30%; 
+    width: 30%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px; 
+}
+
+.quote h2 {
+    margin-bottom: 20px; 
+    font-size: 32px;
+    color: var(--primary-color-2);
+    text-align: left;
+}
+
+.quote p {
+    margin-bottom: 20px; 
+    font-style: italic;
+    color: #666;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.quote button {
+    margin-bottom: 20px; 
+    padding: 10px 20px;
+    background-color: var(--primary-color-3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quote button:hover {
+    background-color: var(--primary-color-1); 
+}
+
+.footer {
+    background-color: var(--primary-color-3);
+    color: white;
+    padding: 1px 1px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.footer .contact-info {
+    border-bottom: 1px solid var(--primary-color-1); 
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-color-1);; 
+}
+
+.footer img {
+    width: 30px; 
+    height: auto; 
+    margin-right: 10px; 
+    margin-left: 10px; 
+}
