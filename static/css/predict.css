@@ -33,7 +33,7 @@ label {
     color: black;
 }
 
-select, input[type="number"], input[type="submit"] {
+select, input[type="number"]{
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -42,28 +42,21 @@ select, input[type="number"], input[type="submit"] {
     box-sizing: border-box;
 }
 
-input[type="submit"] {
-    background-color: var(--primary-color-3);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: var(--primary-color-1);
-}
-
 button[type="submit"] {
     background-color: var(--primary-color-3); 
     color: white; 
     border: none; 
-    padding: 10px; 
     border-radius: 5px; 
+    padding: 10px; 
     cursor: pointer; 
     transition: background-color 0.3s; 
     display: block; 
     width: 50%; 
     margin: 20px auto; 
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-color-1); 
 }
 
 #predictedPrice {

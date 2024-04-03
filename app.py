@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 
 from carPricePrediction.pipeline.predict import PredictionPipeline
+from carPricePrediction.constants.html_content import *
 
 app = Flask(__name__)
 CORS(app)
@@ -15,12 +16,8 @@ class ClientApp:
 @app.route("/", methods=['GET'])
 @cross_origin()
 def home():
-    return render_template('index.html')
-
-@app.route("/about", methods=['GET'])
-@cross_origin()
-def about():
-    return render_template('about.html')
+    content = index_dict
+    return render_template('index.html', content=content)
 
 @app.route("/predict", methods=['GET', 'POST'])
 @cross_origin()
@@ -31,7 +28,14 @@ def predict():
         result = round(result)
         return jsonify({'predictedPrice': result})
     else:
-        return render_template('predict.html')
+        content = predict_dict
+        return render_template('predict.html', content=content)
+
+@app.route("/about", methods=['GET'])
+@cross_origin()
+def about():
+    content = about_dict
+    return render_template('about.html', content=content)
 
 #@app.route("/train", methods=['GET','POST'])
 #def trainRoute():

@@ -5,15 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title</title>
+    <title>{{ content['title'] }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
     {% include 'header.html' %}
     <div class="quote">
-        <h2>A brief description</h2>
-        <p>Explain the project in few words.</p>
-        <button onclick="window.location.href='/predict'">Button to prediction</button>
+        <h2>{{ content['quote_h2'] }}</h2>
+        <p>{{ content['quote_p'] }}</p>
+        <button onclick="window.location.href='/predict'">{{ content['quote_button'] }}</button>
     </div>
     <footer class="footer">
         <div class="contact-info">
