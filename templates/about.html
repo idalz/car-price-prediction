@@ -11,15 +11,15 @@
     <div class="container">
         <div class="section">
             <h2>{{ content['project_title'] }}</h2>
-            <p>{{ content['project_descr'] }}</p>
+            <p>{{ content['project_descr'] | safe }}</p>
         </div>
         <div class="section">
             <h2>{{ content['model_title'] }}</h2>
-            <p>{{ content['model_descr'] }}</p>
+            <p>{{ content['model_descr'] | safe }}</p>
         </div>
         <div class="section">
             <h2>{{ content['data_title'] }}</h2>
-            <p>{{ content['data_descr'] }}</p>
+            <p>{{ content['data_descr'] | safe }}</p>
         </div>
     </div>
 </body>

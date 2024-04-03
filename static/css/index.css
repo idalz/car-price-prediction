@@ -23,7 +23,7 @@ body {
     position: absolute;
     left: 0;
     top: 30%; 
-    width: 30%;
+    width: 25%;
     transform: translateY(-50%);
     backdrop-filter: blur(10px);
     border-radius: 10px; 
@@ -31,9 +31,15 @@ body {
 
 .quote h2 {
     margin-bottom: 20px; 
-    font-size: 32px;
+    font-size: 32;
     color: var(--primary-color-2);
     text-align: left;
+}
+
+.quote span {
+    font-weight: bold; /* Adjust as needed */
+    font-size: 1.2em; /* Adjust size as needed */
+    color: var(--primary-color-1);
 }
 
 .quote p {
@@ -62,7 +68,7 @@ body {
 .footer {
     background-color: var(--primary-color-3);
     color: white;
-    padding: 1px 1px;
+    padding: 8px 5px;
     text-align: center;
     width: 100%;
     box-sizing: border-box; 
@@ -70,11 +76,6 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    
-}
-
-.footer .contact-info {
-    border-bottom: 1px solid var(--primary-color-1); 
 }
 
 .footer a {
@@ -89,7 +90,7 @@ body {
 }
 
 .footer img {
-    width: 30px; 
+    width: 24px; 
     height: auto; 
     margin-right: 10px; 
     margin-left: 10px; 
