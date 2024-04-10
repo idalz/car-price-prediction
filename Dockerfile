@@ -1,18 +1,21 @@
-FROM python:3.8-slim-buster
+FROM python:3.8
 
 # Update package lists and install awscli
 RUN apt update -y && \
     apt install awscli -y && \
     apt clean
 
-# Set the working directory inside the container
-WORKDIR /app
-
 # Copy the current directory contents into the container at /app
 COPY . /app
+
+# Set the working directory inside the container
+WORKDIR /app
 
 # Install Python dependencies
 RUN pip install -r requirements.txt
 
+# Expose port
+EXPOSE $PORT
+
 # Command to run the application
-CMD ["python3", "app.py"]
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
