@@ -2,6 +2,7 @@ numpy
 pandas
 matplotlib
 seaborn
+scikit-learn
 notebook
 kaggle
 torch
@@ -14,4 +15,5 @@ joblib
 types-pyYAML
 Flask
 Flask-Cors
+gunicorn
 -e .
