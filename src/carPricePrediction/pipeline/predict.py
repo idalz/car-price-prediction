@@ -10,8 +10,7 @@ class PredictionPipeline:
         
         # Load and set the model
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        model = torch.load('artifacts/model/model.pth')
-        model.to(device)
+        model = torch.load('artifacts/model/model.pth', map_location=device)
         model.eval()
 
         # Predict the value
