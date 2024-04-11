@@ -1,9 +1,9 @@
-FROM python:3.8
+FROM python:3.8-slim-buster
 
 # Update package lists and install awscli
 RUN apt update -y && \
     apt install awscli -y && \
-    apt clean
+    apt clean 
 
 # Copy the current directory contents into the container at /app
 COPY . /app
