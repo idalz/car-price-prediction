@@ -198,7 +198,7 @@ docker pull idalz/car-price-prediction:latest
 Launch a Docker container based on the downloaded image, specifying port mappings to expose port 8080:
 
 ```bash
-docker run -p 8000:8000 -e PORT=8080 idalz/car-price-prediction:latest
+docker run -p 8080:8080 -e PORT=8080 idalz/car-price-prediction:latest
 ```
 
 Ensure the container is running by opening your browser and navigating to `localhost:8080`. You can now use the application to make predictions!
