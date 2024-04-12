@@ -27,7 +27,7 @@ This project aims to predict car prices based on their features using a neural n
 
 By combining data collection, preprocessing, model training, model evaluation, and web development techniques, this project offers a comprehensive solution for car price prediction that is easily accessible and usable by users.
 
-To explore the detailed research and analysis conducted for the project, refer to the project's [Research Notebook](https://github.com/idalz/car-price-prediction/blob/main/research/00_idalz_car-price-notebook.ipynb).
+To explore the detailed research and analysis conducted for the project, refer to the project's [Research Notebook](https://github.com/idalz/car-price-prediction/blob/main/research/00_idalz_research-notebook.ipynb).
 
 ---
 ## Core Technologies
