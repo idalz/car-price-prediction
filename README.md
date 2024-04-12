@@ -23,7 +23,7 @@ This project aims to predict car prices based on their features using a neural n
 2. **Data Preprocessing**: The collected data undergoes preprocessing to clean, transform, and prepare it for model training.
 3. **Model Training**: A neural network model is trained using the preprocessed data. The model learns to predict car prices based on their features.
 4. **Model Evaluation**: The trained neural network model is evaluated using test data.
-5. **Web Application**: A user-friendly web application is developed to allow users to input car features and receive real-time price predictions.
+5. **Web Application**: A user-friendly web application is developed to allow users to input car features and receive price predictions.
 
 By combining data collection, preprocessing, model training, model evaluation, and web development techniques, this project offers a comprehensive solution for car price prediction that is easily accessible and usable by users.
 
