@@ -86,7 +86,7 @@ pip install -r requirements.txt
 
 ### Executing the Training Pipeline
 
-To prepare the application for use, you'll need to execute the training pipeline. You can accomplish this by running the `main.py` or using DVC (Data Version Control).
+If you want to traina new model, you'll need to execute the training pipeline. You can accomplish this by running the `main.py` or using DVC (Data Version Control).
 
 - **Using  `main.py`** 
 
