@@ -3,6 +3,12 @@
 An end-to-end project utilizing PyTorch, Flask, DVC, Docker, and GitHub Actions for CI/CD deployment on AWS.
 
 ---
+
+If you'd like to **explore the web app**, feel free to check out its demo on my [Hugging Face Spaces](https://huggingface.co/spaces/idalz/car-price-prediction) page.
+
+To **explore research** conducted for the project, refer to the project's [Research Notebook](https://github.com/idalz/car-price-prediction/blob/main/research/00_idalz_research-notebook.ipynb).
+
+---
 ## Contents
 
 - [Project Overview](#project-overview)
@@ -26,8 +32,6 @@ This project aims to predict car prices based on their features using a neural n
 5. **Web Application**: A user-friendly web application is developed to allow users to input car features and receive price predictions.
 
 By combining data collection, preprocessing, model training, model evaluation, and web development techniques, this project offers a comprehensive solution for car price prediction that is easily accessible and usable by users.
-
-To explore the detailed research and analysis conducted for the project, refer to the project's [Research Notebook](https://github.com/idalz/car-price-prediction/blob/main/research/00_idalz_research-notebook.ipynb).
 
 ---
 ## Core Technologies
