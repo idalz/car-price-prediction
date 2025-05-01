@@ -1,10 +1,8 @@
 # Car Price Prediction
 
-An end-to-end project utilizing PyTorch, Flask, DVC, Docker, and GitHub Actions for CI/CD deployment on AWS.
+An end-to-end car price prediction system using a neural network in **PyTorch**, integrated with **Flask** for the web app. Employed **DVC** for experiment tracking, **Docker** for containerization, and **GitHub Actions** for CI/CD deployment on **AWS EC2**.  
 
 ---
-
-If you'd like to **explore the web app**, feel free to check out its demo on my [Hugging Face Spaces](https://huggingface.co/spaces/idalz/car-price-prediction) page.
 
 To **explore research** conducted for the project, refer to the project's [Research Notebook](https://github.com/idalz/car-price-prediction/blob/main/research/00_idalz_research-notebook.ipynb).
 
