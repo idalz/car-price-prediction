@@ -92,7 +92,7 @@ If you want to train a new model, you'll need to execute the training pipeline. 
 
 - **Using  `main.py`** 
 
-Using main\.py directly executes the training pipeline in a sequential manner, performing data ingestion, preprocessing, model training and evaluation all within the same script.
+Using main.py directly executes the training pipeline in a sequential manner, performing data ingestion, preprocessing, model training and evaluation all within the same script.
 
 ```bash
 python main.py
@@ -251,7 +251,7 @@ Ensure the container is running by opening your browser and navigating to `local
 ### 5. Install Docker on EC2 Instance
 
 Click on instance ID and then on connect button to launch the machine's terminal.
-Then, excecute the commands one by one:
+Then, execute the commands one by one:
 
 - **Optional Updates**
 
